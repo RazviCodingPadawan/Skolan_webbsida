@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+    background-color: #F8F8F8;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    color: #636063;
+    padding: 25px 0;
+    font-size: 4rem;
+}
+
+p {
+    color: #636063;
+    word-spacing: 10px;
+}
+
+h3, h2 {
+    font-size: 2rem;
+    color:#6AB98B;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 25px 0 0 35px;
+}
+
+.logo_picture {
+    padding: 0 25px 0 0;
+}
+
+.navbar {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin: 60px 60px 0 0;
+    list-style: none;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    padding: 0 10px;
+    color:#636063;
+}
+
+span {
+    font-weight: bold;
+    color: #6AB98B;
+}
+
+span:hover {
+    color:#636063;
+}
+
+a:hover {
+    color: #6AB98B;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    padding-top: 20px;
+    bottom: 15px;
+    left: 47%;
+    color:#636063;
+    font-size: 11px;
+}
