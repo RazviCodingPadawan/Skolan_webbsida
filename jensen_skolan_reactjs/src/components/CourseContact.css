@@ -138,13 +138,19 @@ label:not(#nameLabel) {
 }
 
 .send {
-    width: 100px;
     margin: 30px 35px;
-    height: 40px;
+    padding: 14px 0;
+    width: 30%;
     border: none;
-    background: #6AB98B;
-    color: #fff;
+    border-radius: 25px;
+    background-color: #636063;
+    color: azure;
+    font-size: 16px;
     cursor: pointer;
 
     text-transform: uppercase;
+}
+
+.send:hover {
+    background-color: #6AB98B;
 }
