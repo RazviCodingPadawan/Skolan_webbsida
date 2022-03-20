@@ -121,7 +121,7 @@ function CourseContact() {
 
                 <label for="message">ID VID FLERA KURSER</label>
                 <textarea 
-                placeholder="Ange alla kurser du är intresserad av med hjälp av IDNUMMER." 
+                placeholder="Ange ID för alla kurser som du är intresserad av:" 
                 className="message" 
                 name="message"
                 ref={messageRef}
