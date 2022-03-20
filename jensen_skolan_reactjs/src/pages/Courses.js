@@ -5,6 +5,7 @@ const Courses = () => {
     return (
         <div className='courses_container'>
             <CourseContact />
+            
         </div>
     );
 }

@@ -119,7 +119,7 @@ function CourseContact() {
                 tabindex="8" 
                 />
 
-                <label for="message">VID FLERA KURSER</label>
+                <label for="message">ID VID FLERA KURSER</label>
                 <textarea 
                 placeholder="Ange alla kurser du är intresserad av med hjälp av IDNUMMER." 
                 className="message" 
