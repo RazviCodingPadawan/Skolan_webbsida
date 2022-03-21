@@ -7,7 +7,7 @@ function createCard(contact) {
     <Card
       key={contact.id}
       name={contact.name}
-      img src={contact.img}
+      img={contact.img}
       tel={contact.phone}
       email={contact.email}
       kontonr={contact.kontonr}
