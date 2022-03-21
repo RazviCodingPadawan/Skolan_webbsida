@@ -12,7 +12,7 @@ function CourseId () {
             </div>
                 <div className='courseid-main'>
                     <h4 className='courseid'>
-                        Bli Javautvecklare och arbeta med programmeringsspråket nummer ett inom en mängd olika branscher.
+                        Lär dig grunderna för att bli en duktig Javascript-programmerare, genom denna kurs lär du dig allt du behöver för att komma igång och bli en stabil programmerare.
                     </h4>
                 </div>
                 <div className='courseid-inner'>
@@ -316,3 +316,5 @@ function CourseId () {
 }
 
 export default CourseId;
+
+//NATTA
