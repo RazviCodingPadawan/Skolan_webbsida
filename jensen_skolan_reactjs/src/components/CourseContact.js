@@ -27,7 +27,7 @@ function CourseContact() {
             KursId: kursIdRef.current.value,
             KursIdn: messageRef.current.value
         }
-        alert("Din anmälan har mottagits: \n" + JSON.stringify(data))
+        alert("Din anmälan har skickats med följande uppgifter: \n" + JSON.stringify(data))
     }
 
     return (
@@ -128,7 +128,7 @@ function CourseContact() {
                 >
 
                 </textarea>
-                <button type="submit" className="send">Send</button>
+                <button type="submit" className="send">SKICKA ANMÄLAN</button>
             </form>
         </div>
     )
