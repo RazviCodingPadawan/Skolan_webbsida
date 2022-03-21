@@ -6,11 +6,11 @@ const Layout = () => {
     return (
         <>
         <header>
-            <div class="logo">
-                <img class="logo_picture" src={logo} alt="logo_picture" width="120px"></img>
-                <h2>Jensen Yrkeshögskola</h2>
+            <div className="logo">
+                <img className="logo_picture" src={logo} alt="logo_picture" width="120px"></img>
+                <h2>Jensen skola</h2>
             </div>
-            <div class="navbar">
+            <div className="navbar">
                 <ul>
                 <NavLink to ='/'>Hemsida</NavLink>
                 <NavLink to ='/personal'>Personal</NavLink>
