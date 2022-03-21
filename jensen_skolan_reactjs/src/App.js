@@ -9,7 +9,7 @@ import {Courses} from './pages/Courses'
 import {Educations} from './pages/Educations'
 import {Apply} from './pages/Apply'
 import {Notfound} from './pages/Notfound'
-import {Contact} from './pages/Contact'
+
 
 import {Layout} from './components/Layout'
 
@@ -22,7 +22,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element= {<Homepage />}/>
           <Route path='personal' element= {<Personal />}/>
-          <Route path='contact' element= {<Contact />}/>
+         
           <Route path='courses' element= {<Courses />}/>
           <Route path='educations' element= {<Educations />}/>
           <Route path='apply' element= {<Apply />}/>
