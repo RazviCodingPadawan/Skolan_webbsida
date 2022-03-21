@@ -78,6 +78,10 @@ a:hover {
     color: #6AB98B;
 }
 
+a:focus {
+    color: #6AB98B;
+}
+
 footer {
     display: flex;
     position: fixed;

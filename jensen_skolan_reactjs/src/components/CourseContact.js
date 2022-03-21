@@ -43,7 +43,7 @@ function CourseContact() {
                         name="firstName"
                         className="firstName" 
                         ref={firstNameRef} 
-                        tabindex="1" 
+                        tabIndex="1" 
                         required
                     />
                     
@@ -53,7 +53,7 @@ function CourseContact() {
                         id="lastName" 
                         className="lastName" 
                         ref={lastNameRef}
-                        tabindex="2"  
+                        tabIndex="2"  
                         required
                     />
                 </div>
@@ -65,7 +65,7 @@ function CourseContact() {
                 className="email"
                 placeholder="exempel@jensen.se"
                 ref={emailRef}
-                tabindex="3" 
+                tabIndex="3" 
                 required
                 />
 
@@ -76,7 +76,7 @@ function CourseContact() {
                 className="phone"
                 placeholder="07********"
                 ref={phoneRef}
-                tabindex="4" 
+                tabIndex="4" 
                 required
                 />
 
@@ -86,7 +86,7 @@ function CourseContact() {
                 id="adress"
                 className="adress"
                 ref={adressRef}
-                tabindex="5" 
+                tabIndex="5" 
                 required
                 />
 
@@ -96,7 +96,7 @@ function CourseContact() {
                 id="postnummer"
                 className="postnummer"
                 ref={postRef}
-                tabindex="6" 
+                tabIndex="6" 
                 required
                 />
 
@@ -106,7 +106,7 @@ function CourseContact() {
                 id="ort"
                 className="ort"
                 ref={ortRef}
-                tabindex="7" 
+                tabIndex="7" 
                 required
                 />
 
@@ -116,7 +116,7 @@ function CourseContact() {
                 id="kursId"
                 className="kursId"
                 ref={kursIdRef}
-                tabindex="8" 
+                tabIndex="8" 
                 />
 
                 <label for="message">ID VID FLERA KURSER</label>

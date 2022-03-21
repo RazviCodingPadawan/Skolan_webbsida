@@ -1,0 +1,9 @@
+.personal_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Personal_bild {
+    background-image: url('../pictures/bild_1.jpg');
+}
