@@ -3,6 +3,14 @@
     margin: auto;
 }
 
+.courseid-header {
+    height: 600px;
+    width: 100%;
+
+    background-image: url("../pictures/course_header.jpg");
+    background-size: cover;
+}
+
 .courseid-main {
     margin: auto; 
     width: 50%;
