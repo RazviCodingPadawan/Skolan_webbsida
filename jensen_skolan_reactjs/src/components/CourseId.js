@@ -9,6 +9,7 @@ function CourseId () {
             <div className='courseid-headertext'>
                 <div><h3>JAVASCRIPT</h3></div>
                 <div><h6>JENSEN YH - KURSID: #SY7352</h6></div>
+                <div><h6 className='courseid-teacher'>Ansvarig Lärare: </h6></div>
             </div>
                 <div className='courseid-main'>
                     <h4 className='courseid'>
@@ -60,6 +61,7 @@ function CourseId () {
         <div className='courseid-headertext'>
                 <div><h3>WEBB- & GRÄNSSNITTSDESIGN</h3></div>
                 <div><h6>JENSEN YH - KURSID: #SY7313</h6></div>
+                <div><h6 className='courseid-teacher'>Ansvarig Lärare: </h6></div>
             </div>
             <div className='courseid-main'>
                     <h4 className='courseid'>
@@ -111,6 +113,7 @@ function CourseId () {
         <div className='courseid-headertext'>
                 <div><h3>GRUNDLÄGGANDE HTML/CSS</h3></div>
                 <div><h6>JENSEN YH - KURSID: #SY7521</h6></div>
+                <div><h6 className='courseid-teacher'>Ansvarig Lärare: </h6></div>
             </div>
                 <div className='courseid-main'>
                     <h4 className='courseid'>
@@ -162,6 +165,7 @@ function CourseId () {
         <div className='courseid-headertext'>
                 <div><h3>USER EXPERIENCE DESIGN</h3></div>
                 <div><h6>JENSEN YH - KURSID: #SY7159</h6></div>
+                <div><h6 className='courseid-teacher'>Ansvarig Lärare: </h6></div>
             </div>
             <div className='courseid-main'>
                     <h4 className='courseid'>
@@ -213,6 +217,7 @@ function CourseId () {
         <div className='courseid-headertext'>
                 <div><h3>MARKNADSKOMMUNIKATION</h3></div>
                 <div><h6>JENSEN YH - KURSID: #SY7387</h6></div>
+                <div><h6 className='courseid-teacher'>Ansvarig Lärare: </h6></div>
             </div>
             <div className='courseid-main'>
                     <h4 className='courseid'>
@@ -264,6 +269,7 @@ function CourseId () {
         <div className='courseid-headertext'>
                 <div><h3>NÄRINGSLIVSFÖRLAGD KURS I GRAFISK DESIGN</h3></div>
                 <div><h6>JENSEN YH - KURSID: #SY7023</h6></div>
+                <div><h6 className='courseid-teacher'>Ansvarig Lärare: </h6></div>
             </div>
             <div className='courseid-main'>
                     <h4 className='courseid'>
