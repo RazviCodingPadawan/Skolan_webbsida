@@ -1,0 +1,156 @@
+.container-course {
+    width: 50vw;
+    margin: 50px auto;
+    background-color: rgb(248, 248, 248);
+    -webkit-box-shadow: -5px 5px 0px 1px rgba(0, 0, 0, 0.250);
+    box-shadow: -2px 2px 3px 3px rgba(0, 0, 0, 0.178);
+
+    border: 1.5px dashed #6AB98B;
+    color: #6AB98B;
+}
+
+.container-course h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.form-course {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    margin: 25px auto;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 90%;
+    height: 40px;
+}
+
+.name input[type="text"] {
+    width: 40%;
+    margin: 0 20px 0 0;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid hsl(225, 11%, 29%);
+    background: transparent;
+    color: #434753;
+    outline-color: #6AB98B;
+}
+
+.name label[for="firstName"] {
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+.name label[for="lastName"] {
+    position: absolute;
+    top: -30px;
+    right: 208px;
+}
+.email {
+    width: 50%;
+    margin: 0 0 20px 35px;
+    height: 40px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #6AB98B;
+}
+label:not(#nameLabel) {
+    margin-left: 35px;
+    margin-bottom: 10px;
+}
+
+.phone {
+    width: 50%;
+    margin: 0 0 20px 35px;
+    height: 40px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #6AB98B;
+}
+
+.adress {
+    width: 50%;
+    margin: 0 0 20px 35px;
+    height: 40px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #6AB98B;
+}
+
+.postnummer {
+    width: 50%;
+    margin: 0 0 20px 35px;
+    height: 40px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #6AB98B;
+}
+
+.ort {
+    width: 50%;
+    margin: 0 0 20px 35px;
+    height: 40px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #6AB98B;
+}
+
+.kursId {
+    width: 50%;
+    margin: 0 0 20px 35px;
+    height: 40px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #6AB98B;
+}
+
+.message {
+    width: 80%;
+    margin: 0 35px;
+    height: 100px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #6AB98B;
+}
+
+.send {
+    margin: 30px 35px;
+    padding: 14px 0;
+    width: 30%;
+    border: none;
+    border-radius: 25px;
+    background-color: #636063;
+    color: azure;
+    font-size: 16px;
+    cursor: pointer;
+
+    text-transform: uppercase;
+}
+
+.send:hover {
+    background-color: #6AB98B;
+}
