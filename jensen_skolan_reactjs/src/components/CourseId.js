@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 function CourseId () {
     return (
         <div className='courseid-container'>
+            <h1>AKTUELLA KURSER</h1>
+          <hr />  
             <div className='courseid-headertext'>
                 <div><h3>JAVASCRIPT</h3></div>
                 <div><h6>JENSEN YH - KURSID: #SY7352</h6></div>

@@ -1,6 +1,8 @@
 .courseid-container {
     width: 90%;
     margin: auto;
+
+    padding-top: 1%;
 }
 
 .courseid-header {
@@ -9,6 +11,10 @@
 
     background-image: url("../pictures/course_header.jpg");
     background-size: cover;
+}
+
+.courseid-headertext {
+    padding-top: 1%;
 }
 
 .courseid-main {
