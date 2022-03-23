@@ -1,6 +1,5 @@
 import React from "react";
 import Detail from "./Detail";
-import bild_1 from '../contacts'
 
 function Card(props) {
   return (
