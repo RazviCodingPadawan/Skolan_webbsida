@@ -13,6 +13,8 @@ body {
 .form_apply {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: hidden;
     border: 1px solid #6AB98B;
     border-radius: 15px;
     min-height: 50%;
@@ -20,20 +22,40 @@ body {
     width: 30%;
 }
 
-input {
-    margin: 25px 0;
-}
-
-label {
-    padding: 0 15px 0 0;
+.form_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
 }
 
 .btn_submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 6px;
-    padding: 10px 15px;
+    padding: 10px 0;
+    margin-top: 30px;
+    background-color: #6AB98B;
+    border: none;
+    color: azure;
 }
 
-form input {
+.btn_submit:hover {
+    font-weight: 700;
+}
+
+input {
     display: flex;
     justify-content: space-between;
+    background-color: #b1d3bf;
+    border-radius: 6px;
+    border: none;
+    padding: 8px 12px;
+    color: #646464;
+    opacity: 0.7;
+}
+
+label {
+    margin-top: 6px;
 }
