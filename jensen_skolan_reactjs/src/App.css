@@ -25,6 +25,7 @@ p {
 h3, h2 {
     font-size: 2rem;
     color:#6AB98B;
+    padding: 45px 0;
 }
 
 /* HEADER */
@@ -78,12 +79,15 @@ a:hover {
     color: #6AB98B;
 }
 
+a:focus {
+    color: #6AB98B;
+}
+
 footer {
     display: flex;
-    position: fixed;
-    padding-top: 20px;
-    bottom: 15px;
-    left: 47%;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0;
     color:#636063;
     font-size: 11px;
 }

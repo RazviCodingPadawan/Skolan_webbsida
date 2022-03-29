@@ -2,13 +2,12 @@ import React from "react";
 import Detail from "./Detail";
 
 function Card(props) {
-  console.log(props.img)
   return (
       <div>
-    <div className="card">
-      <div className="top">
+        <div className="card">
+        <div className="top">
         <h2 className="name">{props.name}</h2>
-        <img className="circle-img"  src={`${props.img}`} alt="dummy-pic" />
+        <img className="Personal_bild" />
       </div>
 
 
@@ -23,4 +22,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default Card

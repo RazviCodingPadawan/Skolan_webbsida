@@ -4,4 +4,4 @@ function Detail(props) {
   return <p className="info">{props.kontonr}</p>;
 }
 
-export default Detail;
+export default Detail

@@ -1,28 +1,32 @@
+import '../styles/Personal.css'
 import React from "react";
 import Card from "../components/Card";
-import contacts from "../contacts";
+import contacts from '../contacts';
 
-function createCard(contact) {
+const Personal = () => {
+
+function createCard(contacts) {
   return (
     <Card
-      key={contact.id}
-      name={contact.name}
-      img={contact.img}
-      tel={contact.phone}
-      email={contact.email}
-      kontonr={contact.kontonr}
+      key={contacts.id}
+      name={contacts.name}
+      img src={contacts.img}
+      tel={contacts.phone}
+      email={contacts.email}
+      kontonr={contacts.kontonr}
     />
   );
 }
-
-function Personal() {
-  return (
-    <div>
-      <h1 className="heading">Lärare</h1>
-      {contacts.map(createCard)}
-
-    </div>
-  );
-}
+    
+    return (
+        
+        <div className='personal_container'>
+            <div>
+            <h1 className="heading">Lärare</h1>
+            {contacts.map(createCard)}
+            </div>
+        </div>
+    )
+    }
 
 export {Personal}
