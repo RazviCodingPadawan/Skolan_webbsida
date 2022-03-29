@@ -35,14 +35,14 @@ function CourseId () {
                         <ul class="courseid">
                             <h5 className="courseid">Kommande Starter</h5>
                             <li>På Plats Kista: 8/8-2022</li>
-                            <li>På Distans: 8/8-2022</li>
+                            <li>På Distans: ----</li>
                         </ul>
                     </div>
                     <div>
                     <ul class="courseid">
                         <h5 className="courseid">Sista Ansökningsdag:</h5>
                             <li>2022-04-30</li>
-                            <li>2022-05-31</li>
+                            <li>Distans: ---</li>
                         </ul>
                     </div>
                 </div>
@@ -86,14 +86,14 @@ function CourseId () {
                     <div>
                         <ul class="courseid">
                             <h5 className="courseid">Kommande Starter</h5>
-                            <li>På Plats Kista: 8/8-2022</li>
+                            <li>På Plats Kista: -----</li>
                             <li>På Distans: 8/8-2022</li>
                         </ul>
                     </div>
                     <div>
                     <ul class="courseid">
                         <h5 className="courseid">Sista Ansökningsdag:</h5>
-                            <li>2022-05-31</li>
+                            <li>Plats: ---</li>
                             <li>2022-05-31</li>
                         </ul>
                     </div>
@@ -139,14 +139,14 @@ function CourseId () {
                         <ul class="courseid">
                             <h5 className="courseid">Kommande Starter</h5>
                             <li>På Plats Kista: 8/8-2022</li>
-                            <li>På Distans: 8/8-2022</li>
+                            <li>På Distans: -----</li>
                         </ul>
                     </div>
                     <div>
                     <ul class="courseid">
                         <h5 className="courseid">Sista Ansökningsdag:</h5>
                             <li>2022-04-30</li>
-                            <li>2022-05-31</li>
+                            <li>Distans: ---</li>
                         </ul>
                     </div>
                 </div>
@@ -191,14 +191,14 @@ function CourseId () {
                         <ul class="courseid">
                             <h5 className="courseid">Kommande Starter</h5>
                             <li>På Plats Kista: 8/8-2022</li>
-                            <li>På Distans: 8/8-2022</li>
+                            <li>På Distans: -----</li>
                         </ul>
                     </div>
                     <div>
                     <ul class="courseid">
                         <h5 className="courseid">Sista Ansökningsdag:</h5>
                             <li>2022-04-30</li>
-                            <li>2022-05-31</li>
+                            <li>Distans: ---</li>
                         </ul>
                     </div>
                 </div>
@@ -242,14 +242,14 @@ function CourseId () {
                     <div>
                         <ul class="courseid">
                             <h5 className="courseid">Kommande Starter</h5>
-                            <li>På Plats Kista: 8/8-2022</li>
+                            <li>På Plats Kista: -----</li>
                             <li>På Distans: 8/8-2022</li>
                         </ul>
                     </div>
                     <div>
                     <ul class="courseid">
                         <h5 className="courseid">Sista Ansökningsdag:</h5>
-                            <li>2022-04-30</li>
+                            <li>Plats: ---</li>
                             <li>2022-05-31</li>
                         </ul>
                     </div>
@@ -294,14 +294,14 @@ function CourseId () {
                     <div>
                         <ul class="courseid">
                             <h5 className="courseid">Kommande Starter</h5>
-                            <li>På Plats Kista: 8/8-2022</li>
+                            <li>På Plats Kista: -----</li>
                             <li>På Distans: 8/8-2022</li>
                         </ul>
                     </div>
                     <div>
                     <ul class="courseid">
                         <h5 className="courseid">Sista Ansökningsdag:</h5>
-                            <li>2022-04-30</li>
+                            <li>Plats: ---</li>
                             <li>2022-05-31</li>
                         </ul>
                     </div>
