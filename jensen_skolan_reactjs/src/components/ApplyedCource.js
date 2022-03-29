@@ -1,3 +1,5 @@
+import "../pages/Apply"
+
 
 const ApplyedCource = () => {
 

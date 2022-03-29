@@ -67,12 +67,22 @@ body {
 input {
     display: flex;
     justify-content: space-between;
-    background-color: #b1d3bf;
+    background-color: #c4d8cd;
     border-radius: 6px;
     border: none;
     padding: 8px 12px;
     color: #646464;
     opacity: 0.7;
+}
+
+textarea {
+    background-color: #c4d8cd;
+    border-radius: 6px;
+    border: none;
+    padding: 8px 12px;
+    color: #646464;
+    opacity: 0.7;
+    min-height: 100px;
 }
 
 label {
