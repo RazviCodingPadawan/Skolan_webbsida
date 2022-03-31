@@ -1,6 +1,20 @@
 .courseid-container {
     width: 90%;
     margin: auto;
+
+    padding-top: 1%;
+}
+
+.courseid-header {
+    height: 600px;
+    width: 100%;
+
+    background-image: url("../pictures/course_header.jpg");
+    background-size: cover;
+}
+
+.courseid-headertext {
+    padding-top: 1%;
 }
 
 .courseid-main {
@@ -30,7 +44,8 @@
       font-size: 4vh;
   }
 
-  h5.courseid {
+  h5.courseid,
+  h6.courseid-teacher {
       color: #6AB98B;
   }
 
@@ -58,3 +73,4 @@
     background-color: #6AB98B;
 }
 
+/* © NATTA*/

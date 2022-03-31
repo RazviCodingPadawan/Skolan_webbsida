@@ -5,7 +5,7 @@ import {Routes, Route} from 'react-router-dom'
 
 import {Homepage} from './pages/Homepage'
 import {Personal} from './pages/Personal'
-import {Courses} from './pages/Courses'
+import {Courses} from './NATTA/Client/pages/Courses'
 import {Educations} from './pages/Educations'
 import {Apply} from './pages/Apply'
 import {Notfound} from './pages/Notfound'
@@ -22,7 +22,6 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element= {<Homepage />}/>
           <Route path='personal' element= {<Personal />}/>
-         
           <Route path='courses' element= {<Courses />}/>
           <Route path='educations' element= {<Educations />}/>
           <Route path='apply' element= {<Apply />}/>
