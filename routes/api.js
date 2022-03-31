@@ -29,7 +29,7 @@ router.post("/save", (req, res) => {
         }
         // CourseDb
         return res.json({
-            msg: "Your data has been saved!!!!!!"
+            msg: "Your data has been saved!"
         });
     });
 });
