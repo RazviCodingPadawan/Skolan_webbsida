@@ -8,7 +8,7 @@ class AddingCourse extends React.Component {
 
   state = {
     courseName: "",
-    courseId: "",
+    courseId: "",  
     startDate: "",
     placeDistance: "",
     educator: "",
@@ -97,8 +97,8 @@ class AddingCourse extends React.Component {
     //JSX
     return(
       <div className="AddingCourse">
-        <h2>LÄGG TILL EN KURS:</h2>
-        <form onSubmit={this.submit}>
+        <h3>LÄGG TILL EN KURS:</h3>
+        <form className="formAddCourse" onSubmit={this.submit}>
           <div className="addCourse">
             <input 
               type="text"
@@ -142,7 +142,7 @@ class AddingCourse extends React.Component {
             />
           </div>
 
-          <button className="btnSubmitCourse">Submit</button>
+          <button className="btnAddCourse">LÄGG TILL</button>
         </form>
 
         <div className="courseDisplay">
