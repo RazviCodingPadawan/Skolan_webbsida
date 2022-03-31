@@ -1,7 +1,7 @@
-import '../styles/Courses.css';
 import CourseContact from '../components/CourseContact';
 import CourseId from '../components/CourseId';
 import CourseIdHeader from '../components/CourseIdHeader';
+import AddingCourse from '../components/AddingCourse';
 
 const Courses = () => {
     return (
@@ -10,6 +10,8 @@ const Courses = () => {
             <CourseIdHeader />
             <hr />
             <CourseId />
+            <hr />
+            <AddingCourse />
             <hr />
             <CourseContact />
             <hr />

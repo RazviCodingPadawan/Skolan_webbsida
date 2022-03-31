@@ -59,13 +59,14 @@
     margin: 30px 35px;
     padding: 14px 0;
     width: 230px;
+    
     border: none;
     border-radius: 25px;
     background-color: #636063;
+
     color: azure;
     font-size: 16px;
     cursor: pointer;
-
     text-transform: uppercase;
 }
 
