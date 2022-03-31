@@ -21,7 +21,7 @@ class AddingCourse extends React.Component {
 
 
   getCourseDb = () => {
-    axios.get("../../../../routes/api.js")
+    axios.get("/api")
       .then((response) => {
         const data = response.data;
         this.setState({ posts: data });

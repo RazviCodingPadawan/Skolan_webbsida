@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
 
-
-// Schema
 const Schema = mongoose.Schema;
 const CourseDbSchema = new Schema({
     courseName: String,
@@ -15,7 +13,6 @@ const CourseDbSchema = new Schema({
     }
 });
 
-// Model
 const CourseDb = mongoose.model("CourseDb", CourseDbSchema);
 
 module.exports =  CourseDb;
