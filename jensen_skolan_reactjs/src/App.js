@@ -5,7 +5,7 @@ import {Routes, Route, Link} from 'react-router-dom'
 
 import {Homepage} from './pages/Homepage'
 import {Personal} from './pages/Personal'
-import {Courses} from './NATTA/pages/Courses'
+import {Courses} from './NATTA/Client/pages/Courses'
 import {Educations} from './pages/Educations'
 import {Apply} from './pages/Apply'
 import {Notfound} from './pages/Notfound'
