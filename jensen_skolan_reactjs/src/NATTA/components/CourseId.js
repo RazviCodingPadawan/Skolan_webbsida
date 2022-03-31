@@ -323,4 +323,4 @@ function CourseId () {
 
 export default CourseId;
 
-//NATTA
+// © NATTA
