@@ -1,7 +1,7 @@
-import CourseContact from '../components/CourseContact';
-import CourseId from '../components/CourseId';
-import CourseIdHeader from '../components/CourseIdHeader';
-import AddingCourse from '../components/AddingCourse';
+import CourseContact from "../components/CourseContact";
+import CourseId from "../components/CourseId";
+import CourseIdHeader from "../components/CourseIdHeader";
+import AddingCourse from "../components/AddingCourse";
 
 const Courses = () => {
     return (

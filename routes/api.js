@@ -4,7 +4,6 @@ const router = express.Router();
 
 const CourseDb = require("../models/CourseDb");
 
-// Routes
 router.get("/", (req, res) => {
 
     CourseDb.find({  })
