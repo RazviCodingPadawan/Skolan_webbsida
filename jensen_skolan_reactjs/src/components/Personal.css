@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: 'Varela Round', sans-serif;
+  }
+  body {
+    background:#F8F8F8;
+    padding: 0 16px;
+  }
+  
+  
+  .note {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 100%;
+    margin: 16px;
+    float: left;
+  }
+  .namn{
+    font-size: 1rem;
+    color:#6AB98B;
+    
+   
+  }
+
+  .note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .note button {
+    position: relative;
+    float: right;
+    right:10px;
+    bottom: -25px;
+    color: #fff;
+    background: #6AB98B;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+   } 
+  /*första rutan*/
+  form {
+    position: relative;
+    width: 480px;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow:0 2px 5px #ccc;
+  }
+  .form-edit{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+    width: 33.3%;
+  
+  }
+  
+  
+  form input,
+  form textarea {
+    font-size: 1.1em;
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    align-items: center;
+    font-size: 1.2em;
+    font-family: 'Varela Round', sans-serif;
+    resize: none;
+  }
+  /*add knappen*/
+  .formbtn {
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: #6AB98B;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .card {
+    display:flex;
+    flex-direction:row;
+    /*flex-wrap: wrap;*/
+  
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 0;
+    border-radius: 7px;
+    box-shadow:0 2px 5px #ccc;
+  }
+  
+  tr  {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow:0 2px 5px #ccc;
+  
+  }
+   /*td {
+    justify-content: left;
+   
+    display:flex;
+    flex-direction:row;
+    gap: 10px;
+  
+  }*/
+  
+  tbody {
+   
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+  
+   
+  }
+  
+  
+  
+  
+  
