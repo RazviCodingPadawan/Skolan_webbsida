@@ -1,4 +1,4 @@
-import {NavLink, Outlet} from 'react-router-dom'
+import {Link, Outlet} from 'react-router-dom'
 import React from 'react';
 import logo from '../pictures/logo.png';
 
@@ -12,11 +12,11 @@ const Layout = () => {
             </div>
             <div className="navbar">
                 <ul>
-                <NavLink to ='/'>Hemsida</NavLink>
-                <NavLink to ='/personal'>Personal</NavLink>
-                <NavLink to ='/courses'>Kurser</NavLink>
-                <NavLink to ='/educations'>Utbildningar</NavLink>
-                <NavLink to ='/apply'><span>Ansökan</span></NavLink>
+                <Link to ='/'>Hemsida</Link>
+                <Link to ='/personal'>Personal</Link>
+                <Link to ='/courses'>Kurser</Link>
+                <Link to ='/educations'>Utbildningar</Link>
+                <Link to ='/apply'><span>Ansökan</span></Link>
                 </ul>
             </div>
         </header>

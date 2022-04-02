@@ -32,7 +32,7 @@ const Apply = () => {
                     </div>
                     <div className='form_input'>
                         <label for="Textarea">Meddelande:</label>
-                        <textarea type="text" id="email" value="Ditt E-post..."/>
+                        <textarea type="text" id="email" value="Skriv meddelande..."/>
                     </div>
                     <button className="btn_submit" type="submit">SKICKA</button>
                 </form>
