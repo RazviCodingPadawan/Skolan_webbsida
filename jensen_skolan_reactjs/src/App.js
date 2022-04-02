@@ -9,6 +9,9 @@ import {Courses} from './pages/Courses'
 import {Educations} from './pages/Educations'
 import {Apply} from './pages/Apply'
 import {Notfound} from './pages/Notfound'
+import RecordList from './components/recordList';
+import EditCourse from './components/editCourse';
+import CreateCourse from './components/createCourse';
 
 
 import {Layout} from './components/Layout'
@@ -26,6 +29,10 @@ function App() {
           <Route path='educations' element= {<Educations />}/>
           <Route path='apply' element= {<Apply />}/>
           <Route path='*' element= {<Notfound />}/>
+          <Route path="/record" element={<RecordList />} />
+          <Route path="/edit/:id" element={<EditCourse />} />
+          <Route path="/create" element={<CreateCourse />} />
+
         </Route>
       </Routes>
       </>
