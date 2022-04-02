@@ -1,47 +1,105 @@
 import '../styles/Apply.css'
-import '../components/ApplyedCource'
-import { ApplyedCource } from '../components/ApplyedCource'
+import React, {Component, Fragment} from 'react';
 
-const Apply = () => {
+// COURCES ARRAY
 
-    return (
-        <div className = "container">
-            <div className='apply_container'>
-                <form className='form_apply' action="/action.php">
-                    <div className='form_input'>
-                        <label for="utbildning">Välja utbildning:</label>
-                        <input list="browsers" name="browsers"/>
-                        <datalist id="browsers">
-                            <option value= 'Course 1'/>
-                            <option value= 'Course 2'/>
-                            <option value= 'Course 3'/>
-                            <option value= 'Course 4'/>
-                        </datalist>
+const COURCES =  [ 
+    {
+    id: 'js',
+    value: 'Javascript',
+    title: 'Javascript',
+    },
+
+    {
+    id: 're',
+    value: 'React JS',
+    title: 'React JS',
+    },
+
+    {
+    id: 'no',
+    value: 'Node JS',
+    title: 'Node JS',
+    }
+]
+
+// APPLY COMPONENT
+
+class Apply extends Component {
+
+    state = {
+        inputText: '',
+        textareaText: '',
+        selectCourse: '',
+        addCourse: {
+            username: '',
+            text: '',
+            position: '',
+        }
+    }
+
+    handleInputChange = ({target: {value} }) => {
+        this.setState ({
+            inputText: value,
+        })
+    }
+
+    handleTextareaChange = ({target: {value} }) => {
+        this.setState ({
+            textareaText: value,
+        })
+    }
+
+    handleSelectChange = ({target: {value} }) => {
+        this.setState ({
+            selectCourse: value,
+        })
+    }
+
+    handleAddCourse = (e) => {
+        e.preventDefault();
+        const { inputText, textareaText, selectCourse} = this.state;
+        this.setState({
+            inputText: '',
+            textareaText: '',
+            selectCourse: '',
+            addCourse: {
+                username: inputText,
+                text: textareaText,
+                position: selectCourse,
+            }
+        })
+    }
+
+    render() {
+        const {inputText, textareaText, selectCourse, addCourse} = this.state;
+        const {username, text, position} = addCourse;
+        return (
+            <Fragment>
+                <div className='apply_container'>
+                    <form className='apply_form'>
+                        <select className='apply_select' value={selectCourse} onChange={this.handleSelectChange}>
+                            {COURCES.map(({ id, value, title}) => (
+                                <option className='apply_select_option' key={id} value={value}>{title}</option>
+                            ))}
+                        </select>
+                        <label className='apply_label'>
+                            Användarnamn:
+                            <input className='apply_input' type='text' name='name' value={inputText} onChange={this.handleInputChange}/>
+                        </label>
+                        <label className='apply_label_text' htmlFor='text'>Skriv ett meddelande:</label>
+                        <textarea className='apply_textarea' id='text' value={textareaText} onChange={this.handleTextareaChange}/>
+                        <button className='apply_btn' onClick={this.handleAddCourse}>SKICKA IN</button>
+                    </form>
+                    <div className='apply_course_list'>
+                        <h2 className='apply_h2'>{position}</h2>
+                        <h3 className='apply_h3'>{username}</h3>
+                        <h3 className='apply_h3'>{text}</h3>
                     </div>
-                    <div className='form_input'>
-                        <label for="fname">Förnamn:</label>
-                        <input className='input_class' type="text" id="fname" value="Ditt namn..."/>
-                    </div>
-                    <div className='form_input'>
-                        <label for="Ename">Efternamn:</label>
-                        <input type="text" id="lname" value="Ditt efternamn..."/>
-                    </div>
-                    <div className='form_input'>
-                        <label for="Epost">E-post:</label>
-                        <input type="text" id="email" value="Ditt E-post..."/>
-                    </div>
-                    <div className='form_input'>
-                        <label for="Textarea">Meddelande:</label>
-                        <textarea type="text" id="email" value="Skriv meddelande..."/>
-                    </div>
-                    <button className="btn_submit" type="submit">SKICKA</button>
-                </form>
-            </div>
-            <div>
-                <ApplyedCource />
-            </div>
-        </div>
-    )
+                </div>
+            </Fragment>
+        )
+    }
 }
 
 export {Apply}
