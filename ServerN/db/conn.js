@@ -24,3 +24,5 @@ module.exports = {
     return _db;
   },
 };
+
+// © NATTA
