@@ -77,7 +77,7 @@ export default function RecordList() {
             <th>SISTA A-DATUM</th>
             <th>UTBILDARE</th>
             <th>PLATS</th>
-            <th></th>
+            <th>ÄNDRA/RADERA</th>
           </tr>
         </thead>
         <tbody>{recordList()}</tbody>
