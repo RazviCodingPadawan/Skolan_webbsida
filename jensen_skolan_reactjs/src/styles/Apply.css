@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 40%;
     min-height: 450px;
     margin-top: 25px;
 }
@@ -22,37 +22,35 @@
     padding: 0 25px;
     margin-top: 35px;
     border-radius: 4px;
-    border: none;
+    border: #6AB98B 0.5px solid;
     color: #6AB98B;
     font-size: 16px;
     font-weight: 700;
+    background: white;
 }
 
 .apply_label {
     display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    width: 90%;
-    padding: 25px 10px 10px 10px;
+    align-items: center;
+    justify-content: center;
     color: #757575;
-    background: white;
 }
 
 .apply_input {
     display: flex;
+    width: 90%;
     margin-top: 20px;
     padding: 15px 25px;
     font-size: 14px;
     font-weight: 300;
+    border: #6AB98B 0.5px solid;
+    background: white;
 }
 
 .apply_label_text {
     display: flex;
-    align-items: center;
-    width: 90%;
     padding: 10px 10px 10px 10px;
     color: #757575;
-    background: white;
 }
 
 .apply_textarea {
@@ -62,6 +60,8 @@
     padding: 10px 25px;
     font-size: 14px;
     font-weight: 300;
+    background: white;
+    border: #6AB98B 0.5px solid;
 }
 
 .apply_btn {
@@ -93,12 +93,12 @@
 
 
 .apply_h2 {
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid #6AB98B;
 }
 
 .apply_h3 {
     font-size: 16px;
-    color: #3a3a3a;
+    color: #6AB98B;
 }
 
 

@@ -1,121 +1,177 @@
-// ARTUR sida
-
+import React from "react";
 import '../styles/Apply.css'
-import React, {Component, Fragment} from 'react';
-
-// COURCES ARRAY
 
 const COURCES =  [  
-    // Här måste jag ansluta databasen från sidan - utbildningar.
-    {
+        // Här måste jag ansluta databasen från sidan - utbildningar.
+        {
         id: 'em',
         value: 'Välj en kurs...',
         title: 'Välj en kurs...',
-    },
-    {
-    id: 'js',
-    value: 'Javascript',
-    title: 'Javascript',
-    },
+        },
+        {
+        id: 'js',
+        value: 'Javascript',
+        title: 'Javascript',
+        },
+    
+        {
+        id: 're',
+        value: 'React JS',
+        title: 'React JS',
+        },
+    
+        {
+        id: 'no',
+        value: 'Node JS',
+        title: 'Node JS',
+        },
+        {
+        id: 'db',
+        value: 'Mongo DB',
+        title: 'Mongo DB',
+        },
 
-    {
-    id: 're',
-    value: 'React JS',
-    title: 'React JS',
-    },
+    ]
+    
 
-    {
-    id: 'no',
-    value: 'Node JS',
-    title: 'Node JS',
-    }
-]
+class Apply extends React.Component {
 
-// APPLY COMPONENT
-
-class Apply extends Component {
+    //STATE
 
     state = {
-        inputText: '',
-        textareaText: '',
-        selectCourse: '',
-        addCourse: {
-            username: '',
-            text: '',
-            position: '',
+        
+        select: '',
+        firstName: '',
+        secondName: '',
+        email: '',
+        message: '',
+        agree: false
+
         }
+
+    //HANDLERS
+
+    handleChange = (event)=> {
+        this.setState({ [event.target.name]: event.target.value})
     }
 
-    // HANDLERS
-
-    handleInputChange = ({target: {value} }) => {
-        this.setState ({
-            inputText: value,
-        })
+    handleCheckboxAgree = (event) => {
+        this.setState({ agree: event.target.checked})
     }
+        
+        // VALIDATION AFTER SUBMIT CLICK
+        
+        handleSubmit = () => {
+            const validateEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email.toLocaleLowerCase());
+            const validateFirstName = this.state.firstName.length < 1;
+            const validateSecondName = this.state.secondName.length < 1;
+            const validateCheckbox = this.state.agree;
 
-    handleTextareaChange = ({target: {value} }) => {
-        this.setState ({
-            textareaText: value,
-        })
-    }
-
-    handleSelectChange = ({target: {value} }) => {
-        this.setState ({
-            selectCourse: value,
-        })
-    }
-
-    handleAddCourse = (e) => {
-        e.preventDefault();
-        const { inputText, textareaText, selectCourse} = this.state;
-        this.setState({
-            inputText: '',
-            textareaText: '',
-            selectCourse: '',
-            addCourse: {
-                username: inputText,
-                text: textareaText,
-                position: selectCourse,
+            if(!validateEmail) {
+                alert('Ange e-post!')
+                return
+            } 
+            if (validateFirstName) {
+                alert('Ange namn!')
+                return
             }
-        })
-    }
-
-    //FORM
+            if (validateSecondName) {
+                alert('Ange efternamn!')
+                return
+            }
+            if (!validateCheckbox) {
+                alert('Acceptera villkoren!')
+                return
+            }
+            
+            this.setState({
+                select: '',
+                firstName: '',
+                secondName: '',
+                email: '',
+                message: '',
+                agree: false
+            })
+            alert('Tack för ansökan!');
+        }
+    
 
     render() {
-        const {inputText, textareaText, selectCourse, addCourse} = this.state;
-        const {username, text, position} = addCourse;
+
+        // USE STATES
+
+        const {select, firstName, secondName, email, message, agree} = this.state;
+
         return (
-            <Fragment>
-                <div className='apply_container'>
-                    <form className='apply_form'>
-                        <select className='apply_select' value={selectCourse} onChange={this.handleSelectChange}>
-                            {COURCES.map(({ id, value, title}) => (
-                                <option className='apply_select_option' key={id} value={value}>{title}</option>
-                            ))}
-                        </select>
-                        <label className='apply_label'>
-                            Användarnamn:
-                            <input className='apply_input' type='text' name='name' value={inputText} onChange={this.handleInputChange}/>
-                        </label>
-                        <label className='apply_label_text' htmlFor='text'>Skriv ett meddelande:</label>
-                        <textarea className='apply_textarea' id='text' value={textareaText} onChange={this.handleTextareaChange}/>
-                        <button className='apply_btn' onClick={this.handleAddCourse}>SKICKA IN</button>
-                    </form>
-                    <div className='apply_course_list'>
-                        <h2 className='apply_h2'>{position}</h2>
-                        <h3 className='apply_h3'>{username}</h3>
-                        <h3 className='apply_h3'>{text}</h3>
-                    </div>
+        <div className="apply_container">
+
+            <div className="apply_form">
+
+                    <select className="apply_select" name="select" value={select} onChange={this.handleChange}>
+                        {COURCES.map(({ id, value, title}) => (
+                                        <option className='apply_select_option' key={id} value={value}>{title}</option>
+                                    ))}
+                    </select>
+
+                    <input className="apply_input"
+                    type='text' 
+                    name="firstName"
+                    placeholder="Namn"
+                    value={firstName}
+                    onChange={this.handleChange}
+                    onSubmit={this.validateFirstName}
+                    />
+
+                    <input className="apply_input"
+                    type='text' 
+                    name="secondName"
+                    placeholder="Efternamn"
+                    value={secondName}
+                    onChange={this.handleChange}
+                    onSubmit={this.validateSecondName}
+                    />
+
+                    <input className="apply_input"
+                    type='text' 
+                    name="email"
+                    placeholder="E-post"
+                    value={email}
+                    onChange={this.handleChange}
+                    onSubmit={this.validateEmail}
+                    />
+
+                    <br />
+                    <hr />
+
+                    <textarea className="apply_textarea"
+                    type='text' 
+                    name="message" 
+                    placeholder="Meddelande" 
+                    value={message} 
+                    onChange={this.handleChange}
+                    />
+
+                    <br />
+
+                    <label className="apply_label">
+                        <input 
+                        type='checkbox' 
+                        name='agree' 
+                        checked={agree} 
+                        onChange={this.handleCheckboxAgree}/>
+                        <p className="apply_label_text">Jag godkänner!</p>
+                    </label>
+                    
+                    <button className="apply_btn" onClick={this.handleSubmit}>SKICKA IN</button>
                 </div>
-            </Fragment>
-        )
-    }
+        </div>
+
+    )}
 }
 
-export {Apply}
+//EXPORT FORM
 
+export {Apply}
 
 
 // ARTUR
