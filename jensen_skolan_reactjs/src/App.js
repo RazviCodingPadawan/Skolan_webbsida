@@ -6,7 +6,7 @@ import {Routes, Route} from 'react-router-dom'
 import {Homepage} from './pages/Homepage'
 import {Personal} from './pages/Personal'
 import {Courses} from './pages/Courses'
-import {Educations} from './pages/Educations'
+import {EducationsList} from './pages/EducationsList'
 import {Apply} from './pages/Apply'
 import {Notfound} from './pages/Notfound'
 import RecordList from './components/recordList';
@@ -26,7 +26,7 @@ function App() {
           <Route index element= {<Homepage />}/>
           <Route path='personal' element= {<Personal />}/>
           <Route path='courses' element= {<Courses />}/>
-          <Route path='educations' element= {<Educations />}/>
+          <Route path='educations' element= {<EducationsList />}/>
           <Route path='apply' element= {<Apply />}/>
           <Route path='*' element= {<Notfound />}/>
           <Route path="/record" element={<RecordList />} />
