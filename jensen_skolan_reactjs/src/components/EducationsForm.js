@@ -29,9 +29,9 @@ const EducationsForm = (props) => {
     
 // varianta 1
     const [name, setName] = useState(props.edit ? props.edit.value : '')
-    const [length, setLength] = useState(props.edit ? props.edit.value : '')
-    const [points, setPoints] = useState(props.edit ? props.edit.value : '')
-    const [place, setPlace] = useState(props.edit ? props.edit.value : '')
+    const [teacher, setTeacher] = useState(props.edit ? props.edit.value : '')
+    const [description, setDescription] = useState(props.edit ? props.edit.value : '')
+    const [classes, setClasses] = useState(props.edit ? props.edit.value : '')
 
 
 
@@ -39,19 +39,19 @@ const EducationsForm = (props) => {
         setName(event.target.value)
  
     }
-    const handleChangeLength = event => {
+    const handleChangeTeacher = event => {
    
-        setLength(event.target.value)
+        setTeacher(event.target.value)
     
     }
-    const handleChangePoints = event => {
+    const handleChangeDescription = event => {
    
-        setPoints(event.target.value)
+        setDescription(event.target.value)
 
     }
-    const handleChangePlace = event => {
+    const handleChangeClasses = event => {
     
-        setPlace(event.target.value)
+        setClasses(event.target.value)
     }
 
     const handleSubmit = event => {
@@ -60,45 +60,45 @@ const EducationsForm = (props) => {
         props.onSubmit({
             id: Math.floor(Math.random() * 10000),
             name: name,
-            length: length,
-            points: points,
-            place: place
+            teacher: teacher,
+            description: description,
+            classes: classes
         })
 
         setName('')
-        setLength('')
-        setPoints('')
-        setPlace('')
+        setTeacher('')
+        setDescription('')
+        setClasses('')
     }
 
     return (
         <form onSubmit={handleSubmit}>
             {props.edit ? (
                 <>
-                <h3>Name</h3>
-                <input type="text" placeholder="Educations Name" value={name} name="text" onChange={handleChangeName}/>
-                <h3>Length</h3>
-                <input type="text" placeholder="Educations Length" value={length} name="text" onChange={handleChangeLength}/>
-                <h3>Points</h3>
-                <input type="text" placeholder="Educations Points" value={points} name="text" onChange={handleChangePoints}/>
-                <h3>Place</h3>
-                <input type="text" placeholder="Educations Place" value={place} name="text" onChange={handleChangePlace}/>
+                <h3>Namn</h3>
+                <input type="text" placeholder="Namn" value={name} name="name" onChange={handleChangeName}/>
+                <h3>Utbildnings Ledare</h3>
+                <input type="text" placeholder="Utbildnings Ledare" value={teacher} name="teacher" onChange={handleChangeTeacher}/>
+                <h3>Beskrivning</h3>
+                <input type="text" placeholder="Beskrivning" value={description} name="description" onChange={handleChangeDescription}/>
+                <h3>Kurser som ingår</h3>
+                <input type="text" placeholder="Kurser som ingår" value={classes} name="classes" onChange={handleChangeClasses}/>
                 <br></br><br></br>
                 <button>Save</button>
                 </>
             ) : 
             (
                 <>
-                <h3>Name</h3>
-                <input type="text" placeholder="Educations Name" value={name} name="name" onChange={handleChangeName}/>
-                <h3>Length</h3>
-                <input type="text" placeholder="Educations Length" value={length} name="length" onChange={handleChangeLength}/>
-                <h3>Points</h3>
-                <input type="text" placeholder="Educations Points" value={points} name="points" onChange={handleChangePoints}/>
-                <h3>Place</h3>
-                <input type="text" placeholder="Educations Place" value={place} name="place" onChange={handleChangePlace}/>
+                <h3>Namn</h3>
+                <input type="text" placeholder="Namn" value={name} name="name" onChange={handleChangeName}/>
+                <h3>Utbildnings Ledare</h3>
+                <input type="text" placeholder="Utbildnings Ledare" value={teacher} name="teacher" onChange={handleChangeTeacher}/>
+                <h3>Beskrivning</h3>
+                <input type="text" placeholder="Beskrivning" value={description} name="description" onChange={handleChangeDescription}/>
+                <h3>Kurser som ingår</h3>
+                <input type="text" placeholder="Kurser som ingår" value={classes} name="place" onChange={handleChangeClasses}/>
                 <br></br><br></br>
-                <button>Add new Education</button>
+                <button>Lägg till ny utbildning</button>
                 </>
             )}
         </form>

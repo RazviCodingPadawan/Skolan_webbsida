@@ -6,14 +6,25 @@ import '../styles/Educations.css'
 const EducationsList = () => {
     const [educations, setEducations] = useState([])
 
-    const addEducation = () => {
-        const data = new XMLHttpRequest()
-        data.open('GET', 'http://localhost:4000/showAll')
-        data.send()
+    const addEducation = (nyEd) => {
+        const createEd = new XMLHttpRequest()
+        createEd.open('POST', 'http://localhost:4000/add')
+        createEd.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
+        createEd.send(JSON.stringify({
+            name: nyEd.name,
+            teacher: nyEd.teacher,
+            description: nyEd.description,
+            classes: nyEd.classes
+        }))
+        
+
     }
 
-    const updateEducations = (educationId, newValue) => {
-        setEducations(prev => prev.map(item => (item.id === educationId ? newValue : item)))
+    const updateEducations = () => {
+        const upEd = new XMLHttpRequest()
+        upEd.open('POST', 'http://localhost:4000/update')
+        
+        //setEducations(prev => prev.map(item => (item.id === educationId ? newValue : item)))
     }
 
     const removeEducation = nameEd => {
@@ -32,9 +43,9 @@ const EducationsList = () => {
             result.forEach((ed) => {
                 arr.push({
                     name: ed.name,
-                    length: ed.teacher,
-                    points: ed.description,
-                    place: ed.classes
+                    teacher: ed.teacher,
+                    description: ed.description,
+                    classes: ed.classes
                 })
             })
             console.log(data.response)

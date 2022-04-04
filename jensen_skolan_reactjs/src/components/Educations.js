@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {EducationsForm} from "./EducationsForm";
+import {EducationsForm} from "../components/EducationsForm";
 
 
 const Educations = ({educations, removeEducation, updateEducations}) => {
@@ -7,19 +7,19 @@ const Educations = ({educations, removeEducation, updateEducations}) => {
     const [edit, setEdit] = useState({
         id: null,
         name: '',
-        length: '',
-        points: '',
-        place: ''
+        teacher: '',
+        description: '',
+        classes: ''
     })
 
-    const submitUpdate = (name, length, points, place) => {
-        updateEducations(edit.id, name, length, points, place)
+    const submitUpdate = (name, teacher, description, classes) => {
+        updateEducations(edit.id, name, teacher, description, classes)
         setEdit({
             id: null,
             name: name,
-            length: length,
-            points: points,
-            place: place
+            teacher: teacher,
+            description: description,
+            classes: classes
         })
     }
     if (edit.id) {
@@ -30,10 +30,10 @@ const Educations = ({educations, removeEducation, updateEducations}) => {
         <div key={index}>
             <div key={education.id}>
                 <h3>{education.name}</h3>
-                <p>{education.length} # {education.points} # {education.place}</p>
+                <p>{education.teacher} # {education.description} # {education.classes}</p>
             </div>
             <button onClick={() => removeEducation(education.name)}>delete</button>
-            <button onClick={() => setEdit({ id: education.id, name: education.name, length: education.length, points: education.points, place: education.points })}>update</button>
+            <button onClick={() => setEdit({ id: education.id, name: education.name, teacher: education.teacher, description: education.description, classes: education.classes })}>update</button>
         </div>
     ))
 }
