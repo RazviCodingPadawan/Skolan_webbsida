@@ -76,7 +76,7 @@ const EducationsForm = (props) => {
             {props.edit ? (
                 <>
                 <h3>Namn</h3>
-                <input type="text" placeholder="Namn" value={name} name="name" onChange={handleChangeName}/>
+                <input type="text" placeholder="name" value={name} name="name" onChange={handleChangeName}/>
                 <h3>Utbildnings Ledare</h3>
                 <input type="text" placeholder="Utbildnings Ledare" value={teacher} name="teacher" onChange={handleChangeTeacher}/>
                 <h3>Beskrivning</h3>
