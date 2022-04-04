@@ -11,18 +11,22 @@ import EditPersonal from "../components/EditPersonal";
 const Personal = ()=> {
   const [contacts, setContacts]= useState(data);
   const [addFormData, setAddFormData]= useState({
+  
     firstName:"",
     email:"",
     phone:"",
     kontonr:"",
   });
  
+  
+
 //edit form, när du trycker på edit kommer denna fram
   const [editFormData, setEditFormData] = useState({
     firstName: "",
     email: "",
     phone: "",
     kontonr: "",
+    
   });
  
 //ger ny rad när man trycker på edit
@@ -39,7 +43,7 @@ const Personal = ()=> {
     const newFormData = {...addFormData};
     newFormData[fieldName] = fieldValue;
 
-    setAddFormData(newFormData);
+    setAddFormData(newFormData)
   }
 
 //när man ändrar nåt, på samma sätt som add
@@ -121,7 +125,8 @@ const Personal = ()=> {
 
     setContacts(newContacts);
   };
-
+ 
+  
   
    /*form för att lägga till lärare*/
     return (
