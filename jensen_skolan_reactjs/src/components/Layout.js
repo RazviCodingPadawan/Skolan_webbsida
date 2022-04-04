@@ -1,3 +1,5 @@
+// ARTUR sida
+
 import {Link, Outlet} from 'react-router-dom'
 import React from 'react';
 import logo from '../pictures/logo.png';
@@ -29,3 +31,5 @@ const Layout = () => {
 }
 
 export {Layout}
+
+// ARTUR

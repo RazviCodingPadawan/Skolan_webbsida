@@ -1,3 +1,5 @@
+// ARTUR sida
+
 import '../styles/Homepage.css'
 import React from 'react';
 import Study from '../pictures/study.png';
@@ -24,3 +26,5 @@ const Homepage = () => {
 }
 
 export {Homepage}
+
+//ARTUR

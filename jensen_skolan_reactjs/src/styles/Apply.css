@@ -1,3 +1,5 @@
+/* ARTUR sida */
+
 .apply_container {
     display: flex;
     flex-direction: column;
@@ -73,6 +75,13 @@
     color: azure;
 }
 
+.apply_btn:hover {
+    background: none;
+    border: #6AB98B 0.5px solid;
+    color: #6AB98B;
+    font-weight: bold;
+}
+
 .apply_course_list {
     display: flex;
     flex-direction: column;
@@ -93,3 +102,6 @@
 }
 
 
+
+
+ /* ARTUR */

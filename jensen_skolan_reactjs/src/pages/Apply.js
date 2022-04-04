@@ -1,9 +1,17 @@
+// ARTUR sida
+
 import '../styles/Apply.css'
 import React, {Component, Fragment} from 'react';
 
 // COURCES ARRAY
 
-const COURCES =  [ 
+const COURCES =  [  
+    // Här måste jag ansluta databasen från sidan - utbildningar.
+    {
+        id: 'em',
+        value: 'Välj en kurs...',
+        title: 'Välj en kurs...',
+    },
     {
     id: 'js',
     value: 'Javascript',
@@ -38,6 +46,8 @@ class Apply extends Component {
         }
     }
 
+    // HANDLERS
+
     handleInputChange = ({target: {value} }) => {
         this.setState ({
             inputText: value,
@@ -71,6 +81,8 @@ class Apply extends Component {
         })
     }
 
+    //FORM
+
     render() {
         const {inputText, textareaText, selectCourse, addCourse} = this.state;
         const {username, text, position} = addCourse;
@@ -103,3 +115,7 @@ class Apply extends Component {
 }
 
 export {Apply}
+
+
+
+// ARTUR
