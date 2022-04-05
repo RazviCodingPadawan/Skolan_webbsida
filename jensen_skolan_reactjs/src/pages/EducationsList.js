@@ -75,7 +75,7 @@ const EducationsList = () => {
             
             <div className="ed-list">
                 <h1>Educations</h1>
-                <button onClick={showAll}>Show all Educations</button>
+                <button className="showBtn" onClick={showAll}>Show all Educations</button>
                 <Educations educations={educations} removeEducation={removeEducation} updateEducations={updateEducations}/>
             </div>
         </div>

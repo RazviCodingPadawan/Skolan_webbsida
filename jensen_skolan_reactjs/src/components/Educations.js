@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {EducationsForm} from "../components/EducationsForm";
+import '../styles/Educations.css'
 
 
 const Educations = ({educations, removeEducation, updateEducations}) => {

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../styles/Educations.css'
 
 
 const EducationsForm = (props) => {
@@ -72,7 +73,7 @@ const EducationsForm = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="createForm" onSubmit={handleSubmit}>
             {props.edit ? (
                 <>
                 <h3>Namn</h3>
