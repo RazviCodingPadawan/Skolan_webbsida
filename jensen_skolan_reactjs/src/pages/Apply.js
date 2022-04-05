@@ -1,3 +1,5 @@
+// ARTUR sida
+
 import React from "react";
 import '../styles/Apply.css'
 
@@ -33,7 +35,6 @@ const COURCES =  [
 
     ]
     
-
 class Apply extends React.Component {
 
     //STATE
@@ -45,9 +46,17 @@ class Apply extends React.Component {
         secondName: '',
         email: '',
         message: '',
-        agree: false
+        agree: false,
+        showCources: {
+            title: '',
+            userName: '',
+            userSecondname: '',
+            userEmail: '',
+            description: '',
+        }
 
         }
+
 
     //HANDLERS
 
@@ -58,7 +67,7 @@ class Apply extends React.Component {
     handleCheckboxAgree = (event) => {
         this.setState({ agree: event.target.checked})
     }
-        
+
         // VALIDATION AFTER SUBMIT CLICK
         
         handleSubmit = () => {
@@ -90,7 +99,14 @@ class Apply extends React.Component {
                 secondName: '',
                 email: '',
                 message: '',
-                agree: false
+                agree: false,
+                showCources: {
+                    title: '',
+                    userName: '',
+                    userSecondname: '',
+                    userEmail: '',
+                    description: '',
+                }
             })
             alert('Tack för ansökan!');
         }
@@ -164,7 +180,8 @@ class Apply extends React.Component {
                     
                     <button className="apply_btn" onClick={this.handleSubmit}>SKICKA IN</button>
                 </div>
-        </div>
+                    
+                </div>
 
     )}
 }

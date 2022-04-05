@@ -10,14 +10,15 @@
     padding: 15px;
 }
 .create {
-    position: top;
+    position: relative;
     height: auto;
-    width: 30%;
     border: solid 1px blue;
-    padding: 15px;
+    margin: 1vh 2vh;
+    padding: 20px;
+
 }
 .ed-list {
-    margin-left: 1vw;
+    margin: 1vh 2vh;
     padding: 15px;
     width: 60%;
     border: solid 1px red;
