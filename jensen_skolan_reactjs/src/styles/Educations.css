@@ -1,15 +1,11 @@
 .educations_container {
+    border: 2px solid black;
     display: flex;
-    width: 95%;
-    justify-content: center;
-    align-items: stretch;
+    align-items: center;
     text-align: center;
-    border: solid 2px green;
-    margin-top: 3vh;
-    height: auto;
-    padding: 15px;
 }
 .create {
+<<<<<<< HEAD
     position: relative;
     height: auto;
     border: solid 1px blue;
@@ -20,13 +16,32 @@
 .ed-list {
     margin: 1vh 2vh;
     padding: 15px;
+=======
+    border: 1px solid green;
+    width: 30%;
+    margin: 2vh;
+    padding: 15px;
+}
+.ed-list {
+    border: 1px solid blue;
+>>>>>>> c3c0d16b7e5f53628ed16631516b556c6ebd89ec
     width: 60%;
-    border: solid 1px red;
+    margin: 2vh;
+    padding: 15px;
 }
-li{
-    list-style-type: disc;
+.createForm input {
+    background-color: none;
+    text-align: center;
+    border: 1px solid grey;
+    width: 70%;
+    border-radius: 20% 0 20% 0;
 }
-.list {
-    flex-direction: column;
+.createForm button, .showBtn {
+    border: none;
+    font-size: large;
+    color: gray;
+}
+.createForm button:hover, .showBtn:hover {
+   font-size: larger;
 }
 

@@ -16,14 +16,20 @@ const EducationsList = () => {
             description: nyEd.description,
             classes: nyEd.classes
         }))
-        
+        //showAll()
 
     }
 
-    const updateEducations = () => {
-        const upEd = new XMLHttpRequest()
-        upEd.open('POST', 'http://localhost:4000/update')
-        
+    const updateEducations = (oldName, name, teacher, description, classes) => {
+        const req = new XMLHttpRequest()
+        req.open('POST', 'http://localhost:4000/update')
+        req.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
+        req.send(JSON.stringify({
+            oldName: oldName,
+            education: name,
+            
+        }))
+        //showAll()
         //setEducations(prev => prev.map(item => (item.id === educationId ? newValue : item)))
     }
 
@@ -33,6 +39,7 @@ const EducationsList = () => {
         req.open('POST', 'http://localhost:4000/delete')
         req.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
         req.send(JSON.stringify({name: nameEd}))
+        //showAll()
     }
 
     const showAll = () => {
@@ -41,7 +48,9 @@ const EducationsList = () => {
             var arr = []
             var result = JSON.parse(data.response)
             result.forEach((ed) => {
+
                 arr.push({
+                    id: 1,
                     name: ed.name,
                     teacher: ed.teacher,
                     description: ed.description,
@@ -56,7 +65,7 @@ const EducationsList = () => {
         
 
     }
-
+    //showAll()
     return (
         <div className="educations_container">
             <div className="create">
@@ -65,8 +74,9 @@ const EducationsList = () => {
             </div>
             
             <div className="ed-list">
-            <button onClick={showAll}>Show all Educations</button>
-            <Educations educations={educations} removeEducation={removeEducation} updateEducations={updateEducations}/>
+                <h1>Educations</h1>
+                <button className="showBtn" onClick={showAll}>Show all Educations</button>
+                <Educations educations={educations} removeEducation={removeEducation} updateEducations={updateEducations}/>
             </div>
         </div>
     )

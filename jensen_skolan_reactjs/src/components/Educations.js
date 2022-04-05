@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {EducationsForm} from "../components/EducationsForm";
+import '../styles/Educations.css'
 
 
 const Educations = ({educations, removeEducation, updateEducations}) => {
@@ -13,7 +14,7 @@ const Educations = ({educations, removeEducation, updateEducations}) => {
     })
 
     const submitUpdate = (name, teacher, description, classes) => {
-        updateEducations(edit.id, name, teacher, description, classes)
+        updateEducations(edit.name, name, teacher, description, classes)
         setEdit({
             id: null,
             name: name,
