@@ -1,0 +1,30 @@
+[  
+        {
+        "id": "em",
+        "value": "Välj en kurs...",
+        "title": "Välj en kurs..."
+        },
+        {
+        "id": "js",
+        "value": "Javascript",
+        "title": "Javascript"
+        },
+    
+        {
+        "id": "re",
+        "value": "React JS",
+        "title": "React JS"
+        },
+    
+        {
+        "id": "no",
+        "value": "Node JS",
+        "title": "Node JS"
+        },
+        {
+        "id": "db",
+        "value": "Mongo DB",
+        "title": "Mongo DB"
+        }
+
+    ]

@@ -5,18 +5,6 @@
     text-align: center;
 }
 .create {
-<<<<<<< HEAD
-    position: relative;
-    height: auto;
-    border: solid 1px blue;
-    margin: 1vh 2vh;
-    padding: 20px;
-
-}
-.ed-list {
-    margin: 1vh 2vh;
-    padding: 15px;
-=======
     border: 1px solid green;
     width: 30%;
     margin: 2vh;
@@ -24,7 +12,6 @@
 }
 .ed-list {
     border: 1px solid blue;
->>>>>>> c3c0d16b7e5f53628ed16631516b556c6ebd89ec
     width: 60%;
     margin: 2vh;
     padding: 15px;

@@ -1,39 +1,10 @@
 // ARTUR sida
 
-import React from "react";
+import React, { Fragment } from "react";
 import '../styles/Apply.css'
+import Utbildningar from '../cources.json'
 
-const COURCES =  [  
-        // Här måste jag ansluta databasen från sidan - utbildningar.
-        {
-        id: 'em',
-        value: 'Välj en kurs...',
-        title: 'Välj en kurs...',
-        },
-        {
-        id: 'js',
-        value: 'Javascript',
-        title: 'Javascript',
-        },
-    
-        {
-        id: 're',
-        value: 'React JS',
-        title: 'React JS',
-        },
-    
-        {
-        id: 'no',
-        value: 'Node JS',
-        title: 'Node JS',
-        },
-        {
-        id: 'db',
-        value: 'Mongo DB',
-        title: 'Mongo DB',
-        },
-
-    ]
+const COURCES =  Utbildningar; // JSON file export
     
 class Apply extends React.Component {
 
@@ -47,17 +18,15 @@ class Apply extends React.Component {
         email: '',
         message: '',
         agree: false,
-        showCources: {
-            title: '',
+        showCource: {
+            courseTitle: '',
             userName: '',
-            userSecondname: '',
-            userEmail: '',
-            description: '',
+            userLastname: '',
+            userEpost: '',
+            text: '',
         }
 
-        }
-
-
+    }
     //HANDLERS
 
     handleChange = (event)=> {
@@ -67,6 +36,7 @@ class Apply extends React.Component {
     handleCheckboxAgree = (event) => {
         this.setState({ agree: event.target.checked})
     }
+
 
         // VALIDATION AFTER SUBMIT CLICK
         
@@ -93,6 +63,8 @@ class Apply extends React.Component {
                 return
             }
             
+            const {select, firstName, secondName, email, message} = this.state;
+
             this.setState({
                 select: '',
                 firstName: '',
@@ -100,15 +72,17 @@ class Apply extends React.Component {
                 email: '',
                 message: '',
                 agree: false,
-                showCources: {
-                    title: '',
-                    userName: '',
-                    userSecondname: '',
-                    userEmail: '',
-                    description: '',
+                showCource: {
+                    courseTitle: select,
+                    userName: firstName,
+                    userLastname: secondName,
+                    userEpost: email,
+                    text: message,
                 }
             })
+
             alert('Tack för ansökan!');
+            console.log(this.state);
         }
     
 
@@ -116,72 +90,73 @@ class Apply extends React.Component {
 
         // USE STATES
 
-        const {select, firstName, secondName, email, message, agree} = this.state;
+        const {select, firstName, secondName, email, message, agree, showCource} = this.state;
+        const {courseTitle, userName, userLastname, userEpost, text} = showCource;
 
         return (
         <div className="apply_container">
-
+            <Fragment>
             <div className="apply_form">
-
-                    <select className="apply_select" name="select" value={select} onChange={this.handleChange}>
-                        {COURCES.map(({ id, value, title}) => (
-                                        <option className='apply_select_option' key={id} value={value}>{title}</option>
-                                    ))}
-                    </select>
-
-                    <input className="apply_input"
-                    type='text' 
-                    name="firstName"
-                    placeholder="Namn"
-                    value={firstName}
-                    onChange={this.handleChange}
-                    onSubmit={this.validateFirstName}
-                    />
-
-                    <input className="apply_input"
-                    type='text' 
-                    name="secondName"
-                    placeholder="Efternamn"
-                    value={secondName}
-                    onChange={this.handleChange}
-                    onSubmit={this.validateSecondName}
-                    />
-
-                    <input className="apply_input"
-                    type='text' 
-                    name="email"
-                    placeholder="E-post"
-                    value={email}
-                    onChange={this.handleChange}
-                    onSubmit={this.validateEmail}
-                    />
-
-                    <br />
-                    <hr />
-
-                    <textarea className="apply_textarea"
-                    type='text' 
-                    name="message" 
-                    placeholder="Meddelande" 
-                    value={message} 
-                    onChange={this.handleChange}
-                    />
-
-                    <br />
-
-                    <label className="apply_label">
-                        <input 
-                        type='checkbox' 
-                        name='agree' 
-                        checked={agree} 
-                        onChange={this.handleCheckboxAgree}/>
-                        <p className="apply_label_text">Jag godkänner!</p>
-                    </label>
-                    
-                    <button className="apply_btn" onClick={this.handleSubmit}>SKICKA IN</button>
+                <select className="apply_select" name="select" value={select} onChange={this.handleChange}>
+                    {COURCES.map(({ id, value, title}) => (
+                    <option className='apply_select_option' key={id} value={value}>{title}</option>
+                    ))}
+                </select>
+                <input className="apply_input"
+                type='text' 
+                name="firstName"
+                placeholder="Namn"
+                value={firstName}
+                onChange={this.handleChange}
+                onSubmit={this.validateFirstName}
+                />
+                <input className="apply_input"
+                type='text' 
+                name="secondName"
+                placeholder="Efternamn"
+                value={secondName}
+                onChange={this.handleChange}
+                onSubmit={this.validateSecondName}
+                />
+                <input className="apply_input"
+                type='text' 
+                name="email"
+                placeholder="E-post"
+                value={email}
+                onChange={this.handleChange}
+                onSubmit={this.validateEmail}
+                />
+                <br />
+                <hr />
+                <textarea className="apply_textarea"
+                type='text' 
+                name="message" 
+                placeholder="Meddelande" 
+                value={message} 
+                onChange={this.handleChange}
+                />
+                <br />
+                <label className="apply_label">
+                    <input 
+                    type='checkbox' 
+                    name='agree' 
+                    checked={agree} 
+                    onChange={this.handleCheckboxAgree}/>
+                    <p className="apply_label_text">Jag godkänner!</p>
+                </label>
+                <button className="apply_btn" onClick={this.handleSubmit}>SKICKA IN</button>
                 </div>
-                    
+                </Fragment>
+
+                <h2 className="history_all">Alla ansökningar:</h2>
+
+                <div className="apply_course_history">
+                    <h3 className="history_title">{courseTitle}</h3>
+                    <h4 className="history_username">{userName}{userLastname}</h4>
+                    <h5 className="history_email">{userEpost}</h5>
+                    <p className="history_message">{text}</p>
                 </div>
+        </div>
 
     )}
 }

@@ -88,8 +88,35 @@
     font-weight: bold;
 }
 
+.history_all {
+    color: #646464;
+}
 
+.apply_course_history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: #6AB98B 1px solid;
+    width: 40%;
+    padding: 0 0 20px 0;
+}
 
+.history_title {
+    padding: 45px 0 15px 0;
+}
+
+.history_username {
+    padding: 10px 0;
+}
+
+.history_email {
+    padding: 10px 0;
+}
+
+.history_message {
+    padding: 10px;
+}
 
 
  /* ARTUR */
