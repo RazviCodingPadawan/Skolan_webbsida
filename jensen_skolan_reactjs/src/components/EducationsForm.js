@@ -71,6 +71,7 @@ const EducationsForm = (props) => {
         setTeacher('')
         setDescription('')
         setClasses('')
+        alert("Utbildning skapad och sparad i databas. Tryck på 'Show all Educations' för att visa alla")
     }
 
     return (
