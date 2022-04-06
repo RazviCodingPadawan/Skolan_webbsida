@@ -16,6 +16,9 @@
     margin: 2vh;
     padding: 15px;
 }
+.createForm{
+    width: auto;
+}
 .createForm input {
     background-color: none;
     text-align: center;

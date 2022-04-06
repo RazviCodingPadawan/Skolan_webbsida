@@ -69,7 +69,6 @@ const Personal = ()=> {
     }
     const newContacts = [...contacts, newContact];
     setContacts(newContacts);
-   
   }
  
   const handleEditFormSubmit = (event) => {
@@ -91,6 +90,7 @@ const Personal = ()=> {
 
     setContacts(newContacts);
     setEditContactId(null);
+    
   };
  //togglebtn mellan update och save (Fragment)
   const handleEditClick = (event, contact) => {
@@ -150,7 +150,6 @@ const Personal = ()=> {
               required="required"
               placeholder="Kontonr..."
               onChange={handleAddFormChange}/> 
-
               <button className='formbtn' type="submit" >Add</button> 
              
     </form>

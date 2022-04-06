@@ -20,14 +20,14 @@ const EducationsList = () => {
 
     }
 
+
     const updateEducations = (oldName, name, teacher, description, classes) => {
         const req = new XMLHttpRequest()
         req.open('POST', 'http://localhost:4000/update')
         req.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
         req.send(JSON.stringify({
             oldName: oldName,
-            education: name,
-            
+            education: name, 
         }))
         //showAll()
         //setEducations(prev => prev.map(item => (item.id === educationId ? newValue : item)))
@@ -38,7 +38,7 @@ const EducationsList = () => {
         console.log(nameEd)
         req.open('POST', 'http://localhost:4000/delete')
         req.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
-        req.send(JSON.stringify({name: nameEd}))
+        req.send(JSON.stringify({ name: nameEd }))
         //showAll()
     }
 

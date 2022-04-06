@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../styles/Educations.css'
+import data from '../pages/personal-data.json'
 
 
 const EducationsForm = (props) => {
@@ -93,10 +94,17 @@ const EducationsForm = (props) => {
                 <h3>Namn</h3>
                 <input type="text" placeholder="Namn" value={name} name="name" onChange={handleChangeName}/>
                 <h3>Utbildnings Ledare</h3>
-                <input type="text" placeholder="Utbildnings Ledare" value={teacher} name="teacher" onChange={handleChangeTeacher}/>
+                <select type="text" placeholder="Utbildnings Ledare" value={teacher} name="teacher" onChange={handleChangeTeacher}>
+                    <option>-- Utbildnings Ledare --</option>
+                    {data.map((result)=>(<option text={result.id}>{result.firstName}</option>))}
+                </select>
                 <h3>Beskrivning</h3>
                 <input type="text" placeholder="Beskrivning" value={description} name="description" onChange={handleChangeDescription}/>
                 <h3>Kurser som ingår</h3>
+                <select>
+                    <option>-- välj kurser --</option>
+                    
+                </select>
                 <input type="text" placeholder="Kurser som ingår" value={classes} name="place" onChange={handleChangeClasses}/>
                 <br></br><br></br>
                 <button>Lägg till ny utbildning</button>

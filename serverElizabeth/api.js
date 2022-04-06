@@ -3,30 +3,25 @@ const path = require('path')
 const app = express()
 const port = 4000
 const bodyParser = require('body-parser')
-const cors = require('cors')
-app.use(cors())
+//const cors = require('cors')
+//app.use(cors())
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
-mongoose.connect("mongodb://127.0.0.1/Educations")
-const educationsSchema = new mongoose.Schema ({
-    name: '',
-    teacher: '',
-    description: '',
-    classes: '',
-})
-/* const personalSchema = new mongoose.Schema ({
+mongoose.connect("mongodb://127.0.0.1/Personal")
+
+const personalSchema = new mongoose.Schema ({
     teacher: '',
     name: '',
     efternamn: '',
     email: '',
     konto: '',
-}) */
+})
 
-var education = mongoose.model("Educations", educationsSchema)
+var education = mongoose.model("Educations", personalSchema)
 
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, 'index.html')); //../jensen_skolan_reactjs/src/pages/EducationsForm.js
@@ -41,7 +36,7 @@ app.post("/add", (req, res) => {
     });
 });
 
-app.post('/update', (req, res) => {
+ app.post('/update', (req, res) => {
     console.log(req.body)
     const filter = {name: req.body.oldName}
     const entry = education.findOneAndUpdate(filter, {
@@ -70,7 +65,7 @@ app.get('/showAll', (req, res) => {
     education.find({}).then(function(educations) {
         res.send(educations)
     })
-})
+}) 
 
 app.listen(port, () => {
     console.log("Server started at port " + port)
