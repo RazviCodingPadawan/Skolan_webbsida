@@ -40,7 +40,7 @@ class Apply extends React.Component {
 
         // VALIDATION AFTER SUBMIT CLICK
         
-        handleSubmit = () => {
+        handleSubmit = (e) => {
             const validateEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email.toLocaleLowerCase());
             const validateFirstName = this.state.firstName.length < 1;
             const validateSecondName = this.state.secondName.length < 1;
@@ -83,6 +83,7 @@ class Apply extends React.Component {
 
             alert('Tack för ansökan!');
             console.log(this.state);
+            e.preventDefault()
         }
     
 
@@ -146,7 +147,6 @@ class Apply extends React.Component {
                 </label>
                 <button className="apply_btn" onClick={this.handleSubmit}>SKICKA IN</button>
                 </div>
-                </Fragment>
 
                 <h2 className="history_all">Alla ansökningar:</h2>
 
@@ -156,6 +156,7 @@ class Apply extends React.Component {
                     <h5 className="history_email">{userEpost}</h5>
                     <p className="history_message">{text}</p>
                 </div>
+             </Fragment>
         </div>
 
     )}
