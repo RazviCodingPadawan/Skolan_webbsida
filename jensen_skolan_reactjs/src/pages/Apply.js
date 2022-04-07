@@ -4,7 +4,7 @@ import React, { Fragment } from "react";
 import '../styles/Apply.css'
 import Utbildningar from '../cources.json'
 
-const COURCES =  Utbildningar; // JSON file export
+const COURCES = Utbildningar; // JSON file export
     
 class Apply extends React.Component {
 
@@ -79,7 +79,8 @@ class Apply extends React.Component {
                     userEpost: email,
                     text: message,
                 }
-            })
+            }) 
+            
 
             alert('Tack för ansökan!');
             console.log(this.state);
@@ -148,11 +149,11 @@ class Apply extends React.Component {
                 <button className="apply_btn" onClick={this.handleSubmit}>SKICKA IN</button>
                 </div>
 
-                <h2 className="history_all">Alla ansökningar:</h2>
+                <h2 className="history_all">Ansökan:</h2>
 
                 <div className="apply_course_history">
-                    <h3 className="history_title">{courseTitle}</h3>
-                    <h4 className="history_username">{userName}{userLastname}</h4>
+                    <h2 className="history_title">{courseTitle}</h2>
+                    <h4 className="history_username">{userName} {userLastname}</h4>
                     <h5 className="history_email">{userEpost}</h5>
                     <p className="history_message">{text}</p>
                 </div>

@@ -102,20 +102,34 @@
     padding: 0 0 20px 0;
 }
 
+.history_li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .history_title {
-    padding: 45px 0 15px 0;
+    font-size: 24px;
+    color: #6AB98B;
+    padding: 15px 0 15px 0;
 }
 
 .history_username {
+    color: #646464;
     padding: 10px 0;
 }
 
 .history_email {
+    color: #646464;
+    font-size: 14px;
     padding: 10px 0;
 }
 
 .history_message {
+    color: #646464;
     padding: 10px;
+    font-size: 14px;
 }
 
 
