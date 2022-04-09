@@ -10,8 +10,8 @@ const Homepage = () => {
         <main>
                 <div className="container">
                     <div className="about">
-                        <h3>Vi är nummer ett</h3>
-                        <h1>Lärande i vår skola</h1>
+                        <h1>De bästa onlinekursplattformarna</h1>
+                        <h3>För dig som vill göra något lärorikt och kreativt på fritiden.</h3>
                         <div className="text_content">
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.Vel suscipit ipsa iste aliquid illum blanditiis vero esse culpa?Cupiditate iusto odit vel illum atque nesciunt animi libero velit explicabo reprehenderit.Et, assumenda!Lorem ipsum dolor, sit amet consectetur adipisicing elit.Vel suscipit ipsa iste aliquid illum blanditiis vero esse culpa?</p>
                         </div>

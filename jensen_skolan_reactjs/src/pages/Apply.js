@@ -10,23 +10,27 @@ class Apply extends React.Component {
 
     //STATE
 
-    state = {
+    constructor(props) {
+        super(props);
+        this.state = {
         
-        select: '',
-        firstName: '',
-        secondName: '',
-        email: '',
-        message: '',
-        agree: false,
-        showCource: {
-            courseTitle: '',
-            userName: '',
-            userLastname: '',
-            userEpost: '',
-            text: '',
+            select: '',
+            firstName: '',
+            secondName: '',
+            email: '',
+            message: '',
+            agree: false,
+            showCource: [{
+                courseTitle: '',
+                userName: '',
+                userLastname: '',
+                userEpost: '',
+                text: '',
+            }]
+    
         }
+      }
 
-    }
     //HANDLERS
 
     handleChange = (event)=> {
@@ -62,29 +66,31 @@ class Apply extends React.Component {
                 alert('Acceptera villkoren!')
                 return
             }
-            
-            const {select, firstName, secondName, email, message} = this.state;
 
-            this.setState({
+        const {select, firstName, secondName, email, message} = this.state;
+        
+
+            
+           this.setState({
                 select: '',
                 firstName: '',
                 secondName: '',
                 email: '',
                 message: '',
                 agree: false,
-                showCource: {
+                showCource: [{
                     courseTitle: select,
                     userName: firstName,
                     userLastname: secondName,
                     userEpost: email,
                     text: message,
-                }
-            }) 
+                }]
+            })
             
-
             alert('Tack för ansökan!');
             console.log(this.state);
-            e.preventDefault()
+            e.preventDefault();
+        
         }
     
 
@@ -93,7 +99,8 @@ class Apply extends React.Component {
         // USE STATES
 
         const {select, firstName, secondName, email, message, agree, showCource} = this.state;
-        const {courseTitle, userName, userLastname, userEpost, text} = showCource;
+        const [courseTitle, userName, userEpost, text] = showCource;
+        
 
         return (
         <div className="apply_container">
@@ -148,14 +155,20 @@ class Apply extends React.Component {
                 </label>
                 <button className="apply_btn" onClick={this.handleSubmit}>SKICKA IN</button>
                 </div>
+                
+                <div className="applyed_cources">
+                    <h2 className="history_all">Ansökan:</h2>
 
-                <h2 className="history_all">Ansökan:</h2>
-
-                <div className="apply_course_history">
-                    <h2 className="history_title">{courseTitle}</h2>
-                    <h4 className="history_username">{userName} {userLastname}</h4>
-                    <h5 className="history_email">{userEpost}</h5>
-                    <p className="history_message">{text}</p>
+                        {this.state.showCource.map((course, i)  => {
+                            return(
+                            <div className="apply_course_history">
+                                <h2 className="history_title" key={i[1]} value={courseTitle}>Kursnamn: {course.courseTitle}</h2>
+                                <h4 className="history_username" key={i[2]} value={userName}>Namn: {course.userName}</h4>
+                                <h5 className="history_email" key={i[3]} value={userEpost}>E-post: {course.userEpost}</h5>
+                                <p className="history_message" key={i[4]} value={text}>Meddelande: {course.text}</p>
+                            </div>
+                        )
+                        })}
                 </div>
              </Fragment>
         </div>

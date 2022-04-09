@@ -17,12 +17,18 @@
     width: 30%;
 }
 
+.picture {
+    display: flex;
+    position: absolute;
+    top: 60%;
+    right: 10%;
+}
+
 .main_picture {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    margin-bottom: 40px;
+    width: 50%;
 }
 
 .text_content {
