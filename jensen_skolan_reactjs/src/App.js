@@ -11,9 +11,9 @@ import {Courses} from './pages/Courses'
 import {EducationsList} from './pages/EducationsList'
 import {Apply} from './pages/Apply'
 import {Notfound} from './pages/Notfound'
-import RecordList from './components/recordList';
-import EditCourse from './components/editCourse';
-import CreateCourse from './components/createCourse';
+import RecordList from './components/RecordList';
+import EditCourse from './components/EditCourse';
+import CreateCourse from './components/CreateCourse';
 
 
 import {Layout} from './components/Layout'

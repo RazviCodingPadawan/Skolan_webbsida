@@ -1,7 +1,7 @@
 import "../styles/Courses.css"
 import CourseContact from "../components/CourseContact";
 
-import RecordList from "../components/recordList";
+import RecordList from "../components/RecordList";
 
 const Courses = () => {
     return (
