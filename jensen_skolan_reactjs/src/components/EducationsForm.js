@@ -1,3 +1,5 @@
+// Razvan D. Georgescu
+
 import React, { useState } from "react";
 import '../styles/Educations.css'
 import data from '../pages/personal-data.json'
@@ -102,10 +104,10 @@ const EducationsForm = (props) => {
                 <h3>Beskrivning</h3>
                 <input type="text" placeholder="Beskrivning" value={description} name="description" onChange={handleChangeDescription}/>
                 <h3>Kurser som ingår</h3>
-                <select>
+                {/* <select>
                     <option>-- välj kurser --</option>
                     
-                </select>
+                </select> */}
                 <input type="text" placeholder="Kurser som ingår" value={classes} name="place" onChange={handleChangeClasses}/>
                 <br></br><br></br>
                 <button>Lägg till ny utbildning</button>
@@ -116,3 +118,5 @@ const EducationsForm = (props) => {
 }
 
 export {EducationsForm}
+
+// Razvan D. Georgescu
