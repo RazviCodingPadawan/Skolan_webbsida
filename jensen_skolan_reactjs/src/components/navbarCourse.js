@@ -14,4 +14,4 @@ export default function NavbarCourse() {
   );
 }
 
-// © NATTA
+// © NATTAA
