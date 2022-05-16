@@ -129,7 +129,7 @@ function Apply() {
                     />
                     <p className="apply_label_text">Jag godkänner!</p>
                 </label>
-                <button className="apply_btn" onClick={addUpdate}>{isUpdate ? "Update" : "Add"}</button>
+                <button className="apply_btn" onClick={addUpdate}>{isUpdate ? "Update" : "ADD"}</button>
 
                 <div className="added_courses">Added courses</div>
 
