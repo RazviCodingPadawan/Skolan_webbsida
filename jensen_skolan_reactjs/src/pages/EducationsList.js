@@ -1,3 +1,5 @@
+// Razvan D. Georgescu
+
 import React, { useState } from "react";
 import {Educations} from '../components/Educations';
 import {EducationsForm} from '../components/EducationsForm'
@@ -29,6 +31,7 @@ const EducationsList = () => {
             oldName: oldName,
             education: name, 
         }))
+        alert("Utbildning updaterad. Tryck på 'Show all Educations' för att visa updaterad lista")
         //showAll()
         //setEducations(prev => prev.map(item => (item.id === educationId ? newValue : item)))
     }
@@ -40,6 +43,7 @@ const EducationsList = () => {
         req.setRequestHeader("Content-Type", "application/json;charset=UTF-8")
         req.send(JSON.stringify({ name: nameEd }))
         //showAll()
+        alert("Utbildning raderad. Tryck på 'Show all Educations' för att visa updaterad lista")
     }
 
     const showAll = () => {
@@ -83,3 +87,5 @@ const EducationsList = () => {
 }
 
 export {EducationsList}
+
+// Razvan D. Georgescu
